@@ -1,0 +1,178 @@
+.mobile-navbar {
+    z-index: 100;
+    display: none;
+    background-color: #414f6b;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;    
+}
+
+.mobile-navbar > * {
+    width: 100%;
+    display: flex;
+    place-content: center;
+}
+
+.mobile-navbar-title {
+    height: 3rem;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.menu-button {
+    cursor: pointer;
+    color: white;
+}
+
+.link-container > a {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+}
+
+.link-container > a:hover {
+    background-color: lightgray;
+}
+
+.link-container > a:nth-child(1) {
+    border-width: 1px 0 1px 0;
+    border-style: solid none dashed none;
+    border-color: black;
+}
+
+.navbar,
+.sticky-navbar {
+    z-index: 100;
+    justify-content: space-between;
+    padding: 0 20%;
+}
+
+.navbar {
+    background-color: transparent;
+    height: 74px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.logo-container {
+    display: flex;
+    place-content: center;
+    width: 43px;
+    height: 43px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: 22px;
+}
+
+.navbar>.nav-tab,
+.sticky-navbar>.nav-tab {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+}
+
+.navbar>.nav-tab a,
+.sticky-navbar>.nav-tab a {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    padding: 2px 4px;
+    border-style: solid;
+    border-width: 0px;
+    border-bottom-width: 1px;
+}
+
+.navbar>.nav-tab a {
+    color: white;
+}
+
+.sticky-navbar-container {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    height: 74px;
+    background-color: white;
+    display: flex;
+}
+
+.sticky-navbar {
+    position: sticky;
+    height: 74px;
+    background-color: white;
+    top: 0px;
+}
+
+.sticky-navbar>.nav-tab a {
+    color: #414f6b;
+    border-bottom-color: #414f6b;
+
+}
+
+
+.brand {
+    margin-left: 10px;
+    height: 43px;
+}
+
+.nav-dropdown {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .sticky-navbar {
+        display: none;
+    }
+
+    .nav-dropdown {
+        display: block;
+        background-color: transparent;
+        border: solid 1px rgba(255, 255, 255, 0.724);
+        border-radius: 0.2rem;
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-style: italic;
+        letter-spacing: 2px;
+    }
+
+    .navbar,
+    .sticky-navbar {
+        box-sizing: border-box;
+        padding: 0.5rem;
+        height: 3rem;
+    }
+
+    .navbar, .sticky-navbar{
+        display: none;
+    }
+
+    .logo-container {
+        margin: 0;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .mobile-navbar {
+        display: flex;
+    }
+
+}
+
+.hide {
+    display: none;
+}
